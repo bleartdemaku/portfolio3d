@@ -161,16 +161,16 @@ export const projects = [
     theme: "btn-back-black",
     name: "Ball for All",
     description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
+      "Built a complete application that is truly unique, allowing amateur footballers to share photos and videos of their skills connect with friends in a familiar social media environment while clubs are able to create vacancies an players can apply to  get to the club that they wanted.",
+    link: "https://github.com/bleartdemaku",
   },
   {
     iconUrl: pricewise,
     theme: "btn-back-red",
     name: "gpt3",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "Developed a chatGPT with modern UI/UX landing page thai i translated from a figma design that is fully responsive and professional looking.",
+    link: "https://github.com/bleartdemaku/gpt3",
   },
   {
     iconUrl: threads,
@@ -178,14 +178,14 @@ export const projects = [
     name: "Banking Website",
     description:
       'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+    link: "https://github.com/bleartdemaku/bank/tree/main/bank",
   },
   {
     iconUrl: car,
     theme: "btn-back-blue",
     name: "Netflix Clone",
     description:
-      "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
+      "Built a complete clone of Netflix, allowing users to watch and search movies or series and be able to leave comments on them.",
     link: "https://github.com/adrianhajdin/project_next13_car_showcase",
   },
   {
@@ -193,7 +193,7 @@ export const projects = [
     theme: "btn-back-pink",
     name: "Roi Website",
     description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
+      "Built a website using ReactJs and ReactBootstrap while utilizing react components, react hooks and other things that react offers.",
     link: "https://github.com/adrianhajdin/social_media_app",
   },
   {
@@ -201,7 +201,7 @@ export const projects = [
     theme: "btn-back-yellow",
     name: "3d Portfolio",
     description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
+      "If you want to build this portfolio yourself i have this repository as public. Feel free to explore my repository",
     link: "https://github.com/adrianhajdin/project_ai_summarizer",
   },
 ];
