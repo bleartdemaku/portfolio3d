@@ -1,13 +1,28 @@
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/Island";
-// import Bird from "../models/Bird";
+import sakura from "../assets/sakura.mp3";
 import Plane from "../models/Plane";
 import Sky from "../models/Sky";
 import HomeInfo from "../components/HomeInfo";
+import { soundoff, soundon } from "../assets/icons";
 
 const Home = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.2;
+  audioRef.current.loop = true;
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play();
+    }
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlayingMusic]);
+
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
 
@@ -43,7 +58,7 @@ const Home = () => {
   const [islandScale, islandPosition, islandRotation] =
     adjustIslandForScreenSize();
 
-  const [planeScale, planePosition] = adjustPlaneForScreenSize();
+  const [scale, position] = adjustPlaneForScreenSize();
 
   return (
     <section className="w-full h-screen relative">
@@ -67,9 +82,9 @@ const Home = () => {
 
           <Plane
             isRotating={isRotating}
-            position={planePosition}
+            position={position}
             rotation={[0, 20.1, 0]}
-            scale={planeScale}
+            scale={scale}
           />
           {/* <Bird /> */}
           <Sky isRotating={isRotating} />
@@ -83,6 +98,14 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+      <div className="absolute bottom-2 left-2">
+        <img
+          src={!isPlayingMusic ? soundoff : soundon}
+          alt="sound"
+          className="w-10 h-10 cursor-pointer object-contain"
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+        />
+      </div>
     </section>
   );
 };
