@@ -185,7 +185,7 @@ export const projects = [
     theme: "btn-back-blue",
     name: "Netflix Clone",
     description:
-      "Built a complete clone of Netflix, allowing users to watch and search movies or series and be able to leave comments on them.",
+      "Built a complete clone of Netflix using  MERN stack, allowing users to watch and search movies or series and be able to leave comments on them.",
     link: "https://github.com/adrianhajdin/project_next13_car_showcase",
   },
   {
